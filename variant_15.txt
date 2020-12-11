@@ -1,0 +1,16 @@
+Straightforward implementation of the CONDENSATION algorithm for simultaneous tracking
+and recognition is not efficient in terms of its computational load. BecauseN = {1, 2, . . . , N} is a countable sample space, we need N samples for the identity variable nt according to Proposition
+1. Assume that, for each identity variable nt, J samples are needed to represent ?t. Hence,
+we needM = J ?N samples in total. Further assume that one resampling step takes Tr seconds
+(s), one predicting step Tp s, computing one transformed image Tt s, evaluating likelihood once
+Tl s, one updating step Tu s. Obviously, the bulk of computation is J?N?(Tr+Tp+Tt+Tl) s to
+deal with one video frame as the computational time for the normalizing step and the marginalizing
+step is negligible. It is well known that computing the transformed image is much more
+expensive than other operations, that is, Tt >> max(Tr, Tp, Tl). Therefore, as the number of
+templates N grows, the computational load increases dramatically.
+There are various approaches in the literature for reducing the computational complexity of
+the CONDENSATION algorithm. In the study [32], random particles were guided by deterministic
+search. The assumed density filtering approach [6], different from CONDENSATION, is even
+more efficient. Those approaches are general and do not explicitly exploit the special structure
+of the distribution in this setting: a mixed distribution of continuous and discrete variables. To
+this end, we propose the following algorithm.
