@@ -11,6 +11,8 @@
   "author": "Denys Dovhan <email@denysdovhan.com> (http://denysdovhan.com/)",
   "license": "MIT",
   "dependencies": {
-    "big-integer": "^1.6.26"
+    "@types/node": "^14.14.12",
+    "big-integer": "^1.6.48",
+    "js-sha1": "^0.6.0"
   }
 }
